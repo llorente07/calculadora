@@ -7,24 +7,35 @@ public class Calculadora {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
+        double n1;
+        double n2;
 
-        int num1, num2;
+        System.out.print("Numero 1");
+        n1 = in.nextDouble();
 
-        System.out.println("Numero1: ");
-        num1 = in.nextInt();
+        System.out.print("Numero 2:");
+        n2 = in.nextDouble();
 
-        System.out.println("Numero2: ");
-        num2 = in.nextInt();
-        
-        System.out.println ("Suma: " + num1 + num2 + "= " + suma);
+    public int suma( double n1 , n2){
     
+        suma sum = new Suma(n1, n2);
 
-    public static int suma(int num1, int num2) {
-
-        int suma = num1 + num2;
-
-        return suma;
+    sum.mostrarResultado ();
+    
     }
 
+    Resta res = new Resta(n1, n2);
+
+    res.mostrarResultado ();
+
+//multiplicacion
+    Multiplicacion mul = new Multiplicacion(n1, n2);
+
+    mul.mostrarResultado ();
+
+//division
+    Division div = new Division(n1, n2);
+
+    div.mostrarResultado ();
 }
 }
